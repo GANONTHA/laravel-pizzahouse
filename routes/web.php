@@ -14,29 +14,31 @@ Route::get('/pizza/{id}', function ($id) {
 });
 
 //pizza list view
-Route::get('/pizza', function () {
+Route::get('/pizza/{id}', function ($id) {
     $pizzas = [
         [
+            'id' => 1,
             'name' => 'hawai',
             'price' => 20,
         ],
         [
+            'id' => 2,
             'name' => 'volcano',
             'price' => 10,
         ],
         [
+            'id' => 3,
             'name' => 'Americano',
             'price' => 20,
         ]
     ];
 
 
-
-
     return view('pizzas', [
         'pizzas' => $pizzas,
         //query parameter
         'type' => request('type'),
-        'age' => request('age')
+        'age' => request('age'),
+        'id' => $id
     ]);
 });
