@@ -1,0 +1,20 @@
+body {
+    background: #222;
+    color: #fff;
+    text-align: center;
+}
+table,
+td {
+    border: #fff solid 1px;
+}
+th {
+    font-size: bold;
+    background: #fff;
+    color: #222;
+}
+
+.pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 2px;
+}
