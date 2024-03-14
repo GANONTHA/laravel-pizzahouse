@@ -16,12 +16,7 @@
                     <td>  ${{$pizza['price']}}</td>
                 </tr>
             @endforeach
-    </table>
+    </table\
 
-    {{-- Route parameter --}}
-    @foreach ($pizzas as $pizza)
-        @if ($id == $pizza['id'])
-            <h1>This is pizza: {{$pizza['name']}} --- {{$pizza['id']}}</h1>
-        @endif
-    @endforeach
+   
 @endsection
