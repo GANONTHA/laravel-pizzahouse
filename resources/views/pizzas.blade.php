@@ -8,15 +8,20 @@
         <tr>
             <th>Name</th>
             <th>Price</th>
+            <th>Type</th>
+            <th>Base</th>
         </tr>
-        <tr>
+        
             @foreach ($pizzas as $pizza)
                 <tr>
-                    <td>  {{$pizza['name']}} </td>
-                    <td>  ${{$pizza['price']}}</td>
+                    <td>{{$pizza->name}} </td>
+                    <td>${{$pizza->price}}</td>
+                    <td>{{$pizza->type}}</td>
+                    <td>{{$pizza->base}}</td>
+                    
                 </tr>
             @endforeach
-    </table\
+            </table>
 
    
 @endsection
