@@ -40,6 +40,6 @@ class PizzaController extends Controller
 
         $pizza->save(); //save the pizza instance into the database
 
-        return redirect('/');
+        return redirect('/')->with('mssg', 'Thanks for your order!'); //redirect to the home page
     }
 }
