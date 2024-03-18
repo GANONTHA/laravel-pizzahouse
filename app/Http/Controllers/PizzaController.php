@@ -23,4 +23,8 @@ class PizzaController extends Controller
     {
         return view('pizas.show', ['id' => $id]);
     }
+    public function create()
+    {
+        return view('pizzas.create');
+    }
 }

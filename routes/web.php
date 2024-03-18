@@ -11,7 +11,8 @@ Route::get('/', function () {
 
 //route parameter view
 Route::get('/pizza', [PizzaController::class, 'index']);
-
+//add an item
+Route::get('/pizza/create', [PizzaController::class, 'create']);
 //pizza list view
 Route::get('/pizza/{id}', [PizzaController::class, 'show']);
 
