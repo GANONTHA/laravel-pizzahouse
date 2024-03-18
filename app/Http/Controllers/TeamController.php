@@ -9,10 +9,10 @@ class TeamController extends Controller
 {
     public function index()
     {
-        $teams = Team::all();
+        $teamqs = Team::all();
 
         return view('teams.index', [
-            'teams' => $teams
+            'teams' => $teamqs
         ]);
     }
     //method to show one signle team
