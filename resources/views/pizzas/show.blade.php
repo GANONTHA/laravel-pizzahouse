@@ -7,5 +7,7 @@
     <h1>Order for {{ $pizza->name }}</h1>
     <p class="type">Type - {{ $pizza->type }}</p>
     <p class="base">Base - {{ $pizza->base }}</p>
-    
+</div>
+<a href="/teams">back</a>
+
 @endsection

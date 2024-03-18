@@ -8,6 +8,6 @@
 <p>{{$team->year}}</p>
 <p>{{$team->worth}}</p>
 
-
+<a href="/teams">back</a>
     
 @endsection
