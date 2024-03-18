@@ -11,8 +11,22 @@ class TeamController extends Controller
     {
         $teams = Team::all();
 
-        return view('teams', [
+        return view('teams.index', [
             'teams' => $teams
         ]);
+    }
+    //method to show one signle team
+    public function show($id)
+    {
+        $team = Team::findOrFail($id);
+
+        return view('teams.show', [
+            'team' => $team
+        ]);
+    }
+    //method to create a new team
+    public function create()
+    {
+        return view('teams.create');
     }
 }

@@ -18,3 +18,7 @@ Route::get('/pizza/{id}', [PizzaController::class, 'show']);
 
 //route to team view with TeamController
 Route::get('/teams', [TeamController::class, 'index']);
+//route to single team view
+Route::get('/teams/{id}', [TeamController::class, 'show']);
+//route to create a new team
+Route::get('/create', [TeamController::class, 'create']);
