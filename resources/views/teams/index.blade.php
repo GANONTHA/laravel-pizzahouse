@@ -23,5 +23,12 @@
         </tr>
     @endforeach
     </table>
+
+    <a href="/create">Add a new team</a>
    
+<h2>
+    {{
+        session('tmssg')
+    }}
+</h2>
 @endsection
