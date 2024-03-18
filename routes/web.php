@@ -15,6 +15,8 @@ Route::get('/pizzas', [PizzaController::class, 'index']);
 Route::get('/pizzas/create', [PizzaController::class, 'create']);
 //pizza list view
 Route::get('/pizzas/{id}', [PizzaController::class, 'show']);
+//post a pizza
+Route::post('/pizzas', [PizzaController::class, 'store']);
 
 //route to team view with TeamController
 Route::get('/teams', [TeamController::class, 'index']);

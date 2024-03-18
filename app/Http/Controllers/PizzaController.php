@@ -28,4 +28,18 @@ class PizzaController extends Controller
     {
         return view('pizzas.create');
     }
+    //store method
+    public function store()
+    {
+        //Grabe the data and store it in the database in the pizzas table
+        $pizza = new Pizza();
+        $pizza->name = request('name');
+        $pizza->type = request('type');
+        $pizza->base = request('base');
+        $pizza->price = request('price');
+
+        $pizza->save(); //save the pizza instance into the database
+
+        return redirect('/');
+    }
 }

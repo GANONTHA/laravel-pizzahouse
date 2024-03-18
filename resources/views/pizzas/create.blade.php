@@ -5,7 +5,7 @@
 <h1>Add a new Pizza</h1>
 
 <form action="/pizzas" method="POST">
-   
+   @csrf
     <label for="name">Your name:</label>
     <input type="text" id="name" name="name">
     <label for="type">Choose type:</label>
@@ -21,6 +21,13 @@
         <option value="garlic crust">Garlic Crust</option>
         <option value="thin & crispy">Thin & Crispy</option>
         <option value="thick">Thick</option>
+    </select>
+    <label for="price">Price:</label>
+    <select name="price" id="price">
+        <option value="10">10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+        <option value="25">25</option>
     </select>
     <input type="submit" value="Order Pizza">
 </form>
