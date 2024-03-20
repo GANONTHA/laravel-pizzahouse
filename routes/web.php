@@ -17,6 +17,8 @@ Route::get('/pizzas/create', [PizzaController::class, 'create']);
 Route::get('/pizzas/{id}', [PizzaController::class, 'show']);
 //post a pizza
 Route::post('/pizzas', [PizzaController::class, 'store']);
+//delete a pizza
+Route::delete('/pizzas/{id}', [PizzaController::class, 'destroy']);
 
 //route to team view with TeamController
 Route::get('/teams', [TeamController::class, 'index']);
@@ -26,3 +28,5 @@ Route::get('/teams/{id}', [TeamController::class, 'show']);
 Route::get('/create', [TeamController::class, 'create']);
 //post a team
 Route::post('/teams', [TeamController::class, 'store']);
+//delete a team
+Route::delete('/teams/{id}', [TeamController::class, 'destroy']);
