@@ -13,6 +13,12 @@
             <li>{{ $topping }}</li>
         @endforeach
     </ol>
+{{-- delete the pizza upon completing order --}}
+<form action="/pizzas/{{ $pizza->id}}" method="POST">
+    @csrf
+    @method('DELETE')
+    <button type="submit">Complete Order</button>
+</form>
 </div>
 <a href="/teams">back</a>
 
