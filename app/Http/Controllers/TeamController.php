@@ -42,4 +42,12 @@ class TeamController extends Controller
 
         return redirect('/teams')->with('tmssg', 'Congrat! Your team has been added!');
     }
+    //method to delete a team
+    public function destroy($id)
+    {
+        $team = Team::findOrFail($id);
+        $team->delete();
+
+        return redirect('/teams');
+    }
 }
