@@ -8,6 +8,12 @@
 <p>{{$team->year}}</p>
 <p>{{$team->worth}}</p>
 
+<form action="/teams/{{$team->id}}" method="POST">
+    @csrf
+    @method('DELETE')
+    <button type="submit">Remove</button>
+</form>
+
 <a href="/teams">back</a>
     
 @endsection
