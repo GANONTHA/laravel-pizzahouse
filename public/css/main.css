@@ -5,12 +5,13 @@ body {
 }
 table,
 td {
-    border: #fff solid 1px;
+    border: #222 solid 1px;
 }
 th {
     font-size: bold;
     background: #fff;
     color: #222;
+    border: #222 solid 1px;
 }
 
 .pic {
