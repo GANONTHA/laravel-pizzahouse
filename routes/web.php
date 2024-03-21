@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\KebabsController;
 use App\Http\Controllers\PizzaController;
 use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Auth;
@@ -22,7 +23,7 @@ Route::post('/pizzas', [PizzaController::class, 'store']);
 Route::delete('/pizzas/{id}', [PizzaController::class, 'destroy'])->middleware('auth');
 
 //route to team view with TeamController
-Route::get('/teams', [TeamController::class, 'index']);
+Route::get('/teams', [TeamController::class, 'index'])->middleware('auth');
 //route to single team view
 Route::get('/teams/{id}', [TeamController::class, 'show']);
 //route to create a new team
@@ -30,8 +31,15 @@ Route::get('/create', [TeamController::class, 'create']);
 //post a team
 Route::post('/teams', [TeamController::class, 'store']);
 //delete a team
-Route::delete('/teams/{id}', [TeamController::class, 'destroy']);
+Route::delete('/teams/{id}', [TeamController::class, 'destroy'])->middleware('auth');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+//Kebabs
+//get al kebbas
+Route::get('/kebabs', [KebabsController::class, 'index'])->name('kebabs.index');
+//get a single kebab
+Route::get('/kebabs/{id}', [KebabsController::class, 'show']);
