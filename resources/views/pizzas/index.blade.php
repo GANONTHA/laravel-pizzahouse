@@ -1,4 +1,5 @@
-@extends('layouts.layout')
+@extends('layouts.app')
+
 
 @section('content')
     <h1>Welcome to our Pizza House</h1>

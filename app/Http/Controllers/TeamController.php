@@ -47,7 +47,6 @@ class TeamController extends Controller
     {
         $team = Team::findOrFail($id);
         $team->delete();
-
         return redirect('/teams');
     }
 }
