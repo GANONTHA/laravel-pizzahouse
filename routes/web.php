@@ -46,3 +46,5 @@ Route::get('/kebabs/{id}', [KebabsController::class, 'show'])->name('kebab.show'
 //add a kebab to the databae
 Route::post('/kebabs', [KebabsController::class, 'store']);
 Route::get('/create', [KebabsController::class, 'create'])->name('kebab.create');
+//delete a kebab
+Route::delete('/kebabs/{id}', [KebabsController::class, 'destroy'])->name('kebab.destroy')->middleware('auth');

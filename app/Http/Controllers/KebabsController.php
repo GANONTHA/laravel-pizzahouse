@@ -34,4 +34,11 @@ class KebabsController extends Controller
         $kebabs->save();
         return redirect('/kebabs')->with('mesg', 'Thanks for ordering kebab');
     }
+    //method to delete a kebab with id
+    public function destroy($id)
+    {
+        $kebab = Kebabs::findOrFail($id);
+        $kebab->delete();
+        return redirect('/kebabs')->with('mesg', 'Kebab deleted');
+    }
 }
