@@ -32,4 +32,10 @@
 <a href="{{ route('uploads.create') }}">
     Upload a file
 </a>
+
+<p>
+    {{
+        session('mesg')
+    }}
+</p>
 @endsection
