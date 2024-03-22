@@ -3,6 +3,7 @@
 use App\Http\Controllers\KebabsController;
 use App\Http\Controllers\PizzaController;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\UploadedFilenController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -45,6 +46,13 @@ Route::get('/kebabs', [KebabsController::class, 'index'])->name('kebabs.index')-
 Route::get('/kebabs/{id}', [KebabsController::class, 'show'])->name('kebab.show')->middleware('auth');
 //add a kebab to the databae
 Route::post('/kebabs', [KebabsController::class, 'store']);
-Route::get('/create', [KebabsController::class, 'create'])->name('kebab.create');
+Route::get('kebabs/create', [KebabsController::class, 'create'])->name('kebab.create');
 //delete a kebab
 Route::delete('/kebabs/{id}', [KebabsController::class, 'destroy'])->name('kebab.destroy')->middleware('auth');
+
+//uploadedFile
+
+Route::get('/uploads', [UploadedFilenController::class, 'index'])->name('uploads.index')->middleware('auth');
+Route::post('/uploads', [UploadedFilenController::class, 'store'])->name('uploads.store');
+Route::get('/uploads/create', [UploadedFilenController::class, 'create'])->name('uploads.create');
+Route::get('/uploads/{id}', [UploadedFilenController::class, 'download'])->name('uploads.download');
