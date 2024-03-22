@@ -39,10 +39,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 //Kebabs
-//get al kebbas
-Route::get('/kebabs', [KebabsController::class, 'index'])->name('kebabs.index');
+//get all kebbas
+Route::get('/kebabs', [KebabsController::class, 'index'])->name('kebabs.index')->middleware('auth');
 //get a single kebab
-Route::get('/kebabs/{id}', [KebabsController::class, 'show'])->name('kebab.show');
+Route::get('/kebabs/{id}', [KebabsController::class, 'show'])->name('kebab.show')->middleware('auth');
 //add a kebab to the databae
 Route::post('/kebabs', [KebabsController::class, 'store']);
 Route::get('/create', [KebabsController::class, 'create'])->name('kebab.create');
